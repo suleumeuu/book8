@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ тілінде машинаға бағытталған бағдарламалау</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Иконки FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Верхняя панель управления -->
+    <header class="topbar">
+        <div class="topbar-left">
+            <button id="toggle-sidebar" class="icon-btn" title="Мәзірді ашу/жабу">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="header-titles">
+                <h1>C++ тілінде машинаға бағытталған бағдарламалау</h1>
+                <p>Электрондық оқу құралы</p>
+            </div>
+        </div>
+
+        <div class="topbar-controls">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="search-input" placeholder="Іздеу...">
+            </div>
+            
+            <div class="zoom-controls">
+                <button id="zoom-out" class="ctrl-btn"><i class="fa-solid fa-minus"></i></button>
+                <span id="zoom-value">100%</span>
+                <button id="zoom-in" class="ctrl-btn"><i class="fa-solid fa-plus"></i></button>
+            </div>
+
+            <button id="theme-toggle" class="btn-action">Қараңғы</button>
+            <button id="fullscreen-toggle" class="btn-action">Толық экран</button>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <!-- Навигационное меню (Содержание / Мазмұны) -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>МАЗМҰНЫ</h2>
+            </div>
+            <nav class="toc-nav">
+                <div class="toc-group">
+                    <h3>1. Дәрістер жинағы</h3>
+                    <ul>
+                        <li><a href="#" data-page="lecture-1">1.1. Объектіге бағытталған программалау технологиясы. C++ тілі</a></li>
+                        <li><a href="#" data-page="lecture-2">1.2. Деректер типінің сілтемелері</a></li>
+                        <li><a href="#" data-page="lecture-3">1.3. Класс абстрактылы тип ретінде</a></li>
+                        <li><a href="#" data-page="lecture-4">1.4. Кластар достары. Операторларды қайта жүктеу</a></li>
+                        <li><a href="#" data-page="lecture-5">1.5. Функция және класс үлгілері</a></li>
+                        <li><a href="#" data-page="lecture-6">1.6. Мұрагерлік</a></li>
+                        <li><a href="#" data-page="lecture-7">1.7. Кластар иерархиясы</a></li>
+                        <li><a href="#" data-page="lecture-8">1.8. Полиморфизм</a></li>
+                        <li><a href="#" data-page="lecture-9">1.9. Абстрактылы кластар</a></li>
+                        <li><a href="#" data-page="lecture-10">1.10. Көріну аймақтары мен атаулар кеңістіктері</a></li>
+                        <li><a href="#" data-page="lecture-11">1.11. Стандартты кітапхана құралдары</a></li>
+                        <li><a href="#" data-page="lecture-12">1.12. Файлдық енгізу-шығару</a></li>
+                        <li><a href="#" data-page="lecture-13">1.13. Ерекше жағдайларды өңдеу</a></li>
+                        <li><a href="#" data-page="lecture-14">1.14. Динамикалық типті анықтау және типтерді түрлендіру</a></li>
+                        <li><a href="#" data-page="lecture-15">1.15. C++ стандартты кітапханасы. Жалпыланған программалау</a></li>
+                    </ul>
+                </div>
+
+                <div class="toc-group">
+                    <h3>2. Зертханалық жұмыстар</h3>
+                    <ul>
+                        <li><a href="#" data-page="lab-1">2.1. Қарапайым есептер. Деректерді енгізу және шығару</a></li>
+                        <li><a href="#" data-page="lab-2">2.2. Шартты операторларды қолдану</a></li>
+                        <li><a href="#" data-page="lab-3">2.3. Көпнұсқалы таңдау. switch операторы</a></li>
+                        <li><a href="#" data-page="lab-4">2.4. Цикл операторларын қолдану</a></li>
+                        <li><a href="#" data-page="lab-5">2.5. Мәтіндік ақпаратпен және массивтермен жұмыс</a></li>
+                        <li><a href="#" data-page="lab-6">2.6. Пайдаланушы функцияларын құру</a></li>
+                        <li><a href="#" data-page="lab-7">2.7. Рекурсивті функциялар</a></li>
+                        <li><a href="#" data-page="lab-8">2.8. Функциялар және нұсқауыштар</a></li>
+                        <li><a href="#" data-page="lab-9">2.9. Құрылымдарды анықтау және қолдану</a></li>
+                        <li><a href="#" data-page="lab-10">2.10. Деректерді сұрыптау және іздеу</a></li>
+                        <li><a href="#" data-page="lab-11">2.11. Динамикалық деректер құрылымдарын программалау</a></li>
+                        <li><a href="#" data-page="lab-12">2.12. Графикалық құрастырулар және деректер құрылымдарын өңдеу</a></li>
+                        <li><a href="#" data-page="lab-13">2.13. Ерекше жағдайларды өңдеу</a></li>
+                        <li><a href="#" data-page="lab-14">2.14. Динамикалық типті анықтау және типтерді түрлендіру</a></li>
+                        <li><a href="#" data-page="lab-15">2.15. Стандартты кітапхана және жалпыланған программалау</a></li>
+                    </ul>
+                </div>
+
+                <div class="toc-group">
+                    <h3>3. Білімді бақылау материалдары</h3>
+                    <ul>
+                        <li><a href="#" data-page="test-100">3.1. Тест тапсырмалары — 100 сұрақ</a></li>
+                        <li><a href="#" data-page="test-keys">3.2. Тест тапсырмаларының жауап кілті</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Область отображения документа -->
+        <main class="content-viewer">
+            <div class="document-sheet" id="document-sheet">
+                
+                <!-- Страница: Описание/Титул -->
+                <section id="page-home" class="content-page active">
+                    <h1 class="doc-main-title">C++ ТІЛІНДЕ МАШИНАҒА БАҒЫТТАЛҒАН БАҒДАРЛАМАЛАУ</h1>
+                    <p class="doc-subtitle">Электрондық оқу құралы</p>
+                    <hr>
+                    <h2>Алғы сөз</h2>
+                    <p>«С++ тілінде машинаға бағытталған бағдарламалау» электрондық оқулық білім алушылардың С++ тілінде бағдарламалар құру, деректерді өңдеу және компьютер жадымен жұмыс істеу негіздерін меңгеруіне арналған.</p>
+                    <p>Құрастырушы: Найзағараева А.А. С.Сейфуллин атындағы Қазақ агротехникалық зерттеу университеті, «Ақпараттық жүйелер» білім беру бағдарламалары тобының аға оқытушысы, PhD.</p>
+                </section>
+
+                <!-- Страница: Дәріс №1 -->
+                <section id="page-lecture-1" class="content-page">
+                    <h2>Дәріс №1. Объектіге бағытталған программалау технологиясы. C++ тілі</h2>
+                    <p><strong>Дәрістің мақсаты:</strong> объектіге бағытталған программалау технологиясы түсініктерімен таныстыру.</p>
+                    <p><strong>Дәрістің мазмұны:</strong> класс ұғымы және оның элементтері. С++ тілі ортасының артықшылықтары.</p>
+                    <p>Нақты әлемнің объектілеріне еліктеуді C++ немесе Java сияқты объектіге бағытталған программалау тілдерінде кластарды анықтау арқылы жүзеге асыруға болады. Класс деректер мүшелері мен әдістер мүшелерінен тұрады...</p>
+                </section>
+
+                <!-- Страница: Дәріс №2 -->
+                <section id="page-lecture-2" class="content-page">
+                    <h2>Дәріс №2. Деректер типінің сілтемелері</h2>
+                    <p><strong>Дәрістің мақсаты:</strong> объектіге сілтемені қолданудың әдістерін ұғындыру.</p>
+                    <p>С++ тілінде нұсқауышқа туыс элемент – сілтеме (reference) бар. Сілтеме барлық жағдайда жасырын нұсқауыш болып, оны кезкелген мақсат үшін айнымалының тағы бір аты ретінде қолдануға болады...</p>
+                </section>
+
+                <!-- Страница: Зертханалық №1 -->
+                <section id="page-lab-1" class="content-page">
+                    <h2>№1 Зертханалық жұмыс. Есептелетін және есептелмейтін түріндегі қарапайым типтік есептер</h2>
+                    <p><strong>Жұмыс мақсаты:</strong> Студенттерді енгізу – шығару операторларын пайдаланып, С++ тілінде қарапайым программалар жазуға үйрету.</p>
+                    <pre><code>#include &lt;stdio.h&gt;
+main()
+{
+    float a, b, c;
+    printf("Екі санды енгіз: ");
+    scanf("%f%f", &a, &b);
+    c = a + b;
+    printf("Қосындысы c=%f\n", c);
+}</code></pre>
+                </section>
+
+                <!-- Другие страницы добавляются аналогичным образом -->
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
